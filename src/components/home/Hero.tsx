@@ -5,20 +5,18 @@ import { FadeIn } from "@/components/FadeIn";
 export function Hero() {
   return (
     <section className="relative bg-green-900 overflow-hidden">
-      {/* Gradient background (replace with hero image when available) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-900 via-green-800 to-green-700" />
+      {/* Background image */}
+      <Image
+        src="/hero-bg.jpg"
+        alt=""
+        fill
+        className="object-cover"
+        priority
+      />
+      {/* Green overlay */}
+      <div className="absolute inset-0 bg-green-900/75" />
 
       <div className="relative mx-auto max-w-6xl px-5 py-28 sm:py-36 lg:py-44">
-        <FadeIn delay={0}>
-          <Image
-            src="/logo-landscape-black.png"
-            alt="GPS Nutrition"
-            width={400}
-            height={160}
-            className="h-16 sm:h-20 w-auto"
-            priority
-          />
-        </FadeIn>
         <FadeIn delay={100}>
           <h1 className="mt-8 text-5xl text-white sm:text-6xl lg:text-7xl leading-[1.05] max-w-4xl">
             Simple Nutrition Guidance for Real Life

@@ -63,17 +63,24 @@ export default function AboutPage() {
             delay={150}
             className="lg:col-span-2 flex items-center"
           >
-            <div className="w-full bg-green-50 rounded-lg p-10 text-center">
-              <p className="text-7xl font-serif text-green-700">GPS</p>
-              <p className="mt-3 text-sm uppercase tracking-[0.2em] text-green-600 font-sans font-medium">
-                Gwen Pearson Sully
-              </p>
-              <p className="mt-2 text-neutral-600 font-sans text-sm">
-                Registered Nutritionist
-              </p>
-              <p className="mt-1 text-neutral-500 font-sans text-sm">
-                GPS Nutrition Ltd.
-              </p>
+            <div className="w-full overflow-hidden rounded-lg">
+              {/* TODO: Replace with Gwen's photo — swap src to "/gwen.jpg" */}
+              <div className="aspect-[3/4] w-full bg-green-50 flex flex-col items-center justify-center">
+                <div className="h-20 w-20 rounded-full bg-green-200 flex items-center justify-center">
+                  <svg className="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                  </svg>
+                </div>
+                <p className="mt-4 text-sm uppercase tracking-[0.2em] text-green-600 font-sans font-medium">
+                  Gwen Pearson Sully
+                </p>
+                <p className="mt-2 text-neutral-600 font-sans text-sm">
+                  Registered Nutritionist
+                </p>
+                <p className="mt-1 text-neutral-400 font-sans text-xs">
+                  Photo coming soon
+                </p>
+              </div>
             </div>
           </FadeIn>
         </div>

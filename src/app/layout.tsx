@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
@@ -96,6 +97,8 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
       </body>
+      {/* TODO: Replace G-XXXXXXXXXX with your real Google Analytics measurement ID */}
+      <GoogleAnalytics gaId="G-XXXXXXXXXX" />
     </html>
   );
 }

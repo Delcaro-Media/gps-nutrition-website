@@ -42,11 +42,11 @@ export function Navbar() {
             aria-label="GPS Nutrition – Home"
           >
             <Image
-              src="/logo-landscape-white.png"
+              src="/logo.png"
               alt="GPS Nutrition"
-              width={400}
-              height={160}
-              className="h-20 w-auto"
+              width={500}
+              height={200}
+              className="h-28 w-auto"
               priority
             />
           </Link>
