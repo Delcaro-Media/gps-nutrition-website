@@ -5,7 +5,7 @@ import { FadeIn } from "@/components/FadeIn";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about GPS Nutrition and founder Gwen Pearson Sully. Personalized nutrition services to help you reach your health goals.",
+    "Learn about GPS Nutrition and founder Gwen Ganske. Personalized nutrition services to help you reach your health goals.",
 };
 
 export default function AboutPage() {
@@ -23,7 +23,7 @@ export default function AboutPage() {
         </FadeIn>
         <FadeIn delay={100}>
           <p className="mt-6 text-neutral-600 max-w-2xl leading-relaxed font-sans text-base">
-            GPS Nutrition Ltd. was founded by Gwen Pearson Sully — a registered
+            GPS Nutrition Ltd. was founded by Gwen Ganske — a registered
             nutritionist with a passion for helping people eat well and feel
             their best.
           </p>
@@ -44,11 +44,12 @@ export default function AboutPage() {
                 charging for this,&rdquo; GPS Nutrition was born.
               </p>
               <p>
-                GPS stands for Gwen Pearson Sully — a name that also reflects
-                the mission of the business: to guide people on their path to
-                better nutrition. Just like a GPS helps you find your way, GPS
-                Nutrition helps you navigate the often-confusing world of
-                healthy eating with clear, personalized direction.
+                GPS stands for Gwen and her two sons, Pearson and Sully — a
+                name that also reflects the mission of the business: to guide
+                people on their path to better nutrition. Just like a GPS helps
+                you find your way, GPS Nutrition helps you navigate the
+                often-confusing world of healthy eating with clear, personalized
+                direction.
               </p>
               <p>
                 As a registered nutritionist with ongoing additional training,
@@ -72,7 +73,7 @@ export default function AboutPage() {
                   </svg>
                 </div>
                 <p className="mt-4 text-sm uppercase tracking-[0.2em] text-green-600 font-sans font-medium">
-                  Gwen Pearson Sully
+                  Gwen Ganske
                 </p>
                 <p className="mt-2 text-neutral-600 font-sans text-sm">
                   Registered Nutritionist

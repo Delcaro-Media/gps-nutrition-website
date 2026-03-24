@@ -129,7 +129,7 @@ export default function HomePage() {
                 <p className="mt-6 text-neutral-600 leading-relaxed font-sans text-base">
                   GPS Nutrition was born from a passion for helping people eat
                   well. After years of creating meal plans and nutrition
-                  guidance for friends and family, founder Gwen Pearson Sully
+                  guidance for friends and family, founder Gwen Ganske
                   made it official — bringing professional nutrition services
                   to those ready to take control of their health.
                 </p>
@@ -145,7 +145,7 @@ export default function HomePage() {
               <div className="bg-green-50 rounded-lg p-10 text-center">
                 <p className="text-6xl font-serif text-green-700">GPS</p>
                 <p className="mt-2 text-sm uppercase tracking-[0.2em] text-green-600 font-sans font-medium">
-                  Gwen Pearson Sully
+                  Gwen · Pearson · Sully
                 </p>
                 <p className="mt-4 text-neutral-600 font-sans text-sm">
                   Registered Nutritionist

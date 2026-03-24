@@ -10,7 +10,7 @@ export const siteConfig = {
   description:
     "Personalized nutrition services including meal plans, group programs, and one-on-one consultations. Helping you reach your health goals with expert guidance.",
   url: "https://www.gpsnutrition.ca",
-  owner: "Gwen Pearson Sully",
+  owner: "Gwen Ganske",
   emails: {
     info: "gwen@gpsnutrition.ca",
   },
