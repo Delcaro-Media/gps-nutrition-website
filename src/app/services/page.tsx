@@ -23,7 +23,7 @@ export default function ServicesPage() {
         </FadeIn>
         <FadeIn delay={100}>
           <p className="mt-6 text-neutral-600 max-w-2xl leading-relaxed font-sans text-base">
-            GPS Nutrition offers three streams of service to meet you where you
+            GPS Nutrition offers three service options to meet you where you
             are on your health journey. From grab-and-go meal plans to fully
             personalized consultations.
           </p>
@@ -51,7 +51,7 @@ export default function ServicesPage() {
                 </svg>
               </div>
               <p className="text-sm uppercase tracking-[0.2em] text-neutral-600 font-sans font-medium">
-                Stream One
+                Option One
               </p>
             </div>
             <h2 className="text-3xl text-neutral-900">Meal Plans</h2>
@@ -171,7 +171,7 @@ export default function ServicesPage() {
                   </svg>
                 </div>
                 <p className="text-sm uppercase tracking-[0.2em] text-neutral-600 font-sans font-medium">
-                  Stream Two
+                  Option Two
                 </p>
               </div>
               <h2 className="text-3xl text-neutral-900">Group Programs</h2>
@@ -236,7 +236,7 @@ export default function ServicesPage() {
                 </svg>
               </div>
               <p className="text-sm uppercase tracking-[0.2em] text-neutral-600 font-sans font-medium">
-                Stream Three
+                Option Three
               </p>
             </div>
             <h2 className="text-3xl text-neutral-900">
@@ -272,7 +272,7 @@ export default function ServicesPage() {
                 <svg className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                 </svg>
-                Tailored to your body, goals, and lifestyle
+                Tailored to your physiological needs
               </li>
             </ul>
           </FadeIn>

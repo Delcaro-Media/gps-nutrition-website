@@ -61,6 +61,16 @@ export function Footer() {
               </li>
               <li>
                 <a
+                  href={siteConfig.social.tiktok}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  TikTok
+                </a>
+              </li>
+              <li>
+                <a
                   href={`mailto:${siteConfig.emails.info}`}
                   className="hover:text-white transition-colors"
                 >

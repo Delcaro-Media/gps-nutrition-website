@@ -48,14 +48,14 @@ export default function AboutPage() {
                 name that also reflects the mission of the business: to guide
                 people on their path to better nutrition. Just like a GPS helps
                 you find your way, GPS Nutrition helps you navigate the
-                often-confusing world of healthy eating with clear, personalized
+                often confusing world of healthy eating with clear, personalized
                 direction.
               </p>
               <p>
-                As a registered nutritionist with ongoing additional training,
+                As a registered holistic nutritionist with ongoing additional training,
                 Gwen is expanding her expertise to offer even more specialized
                 services, including the ability to pull requisitions and create
-                nutrition plans that are 100% tailored to your specific needs.
+                nutrition plans that are 100% tailored to your physiological needs.
               </p>
             </div>
           </FadeIn>
@@ -76,7 +76,10 @@ export default function AboutPage() {
                   Gwen Ganske
                 </p>
                 <p className="mt-2 text-neutral-600 font-sans text-sm">
-                  Registered Nutritionist
+                  Registered Holistic Nutritionist
+                </p>
+                <p className="mt-1 text-neutral-600 font-sans text-sm">
+                  Certified in Holistic Nutrition
                 </p>
                 <p className="mt-1 text-neutral-400 font-sans text-xs">
                   Photo coming soon

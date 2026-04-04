@@ -17,6 +17,8 @@ export const siteConfig = {
   social: {
     instagram: "https://www.instagram.com/gps_nutrition_ltd/",
     instagramHandle: "@gps_nutrition_ltd",
+    tiktok: "https://www.tiktok.com/@gpsnutrition",
+    tiktokHandle: "@gpsnutrition",
   },
   navigation: [
     { label: "Home", href: "/" },

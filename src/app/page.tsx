@@ -127,8 +127,9 @@ export default function HomePage() {
                   Your Guide to Better Health
                 </h2>
                 <p className="mt-6 text-neutral-600 leading-relaxed font-sans text-base">
-                  GPS Nutrition was born from a passion for helping people eat
-                  well. After years of creating meal plans and nutrition
+                  GPS Nutrition was born from a passion for helping people
+                  obtain wellness through nutrition. After years of creating
+                  meal plans and nutrition
                   guidance for friends and family, founder Gwen Ganske
                   made it official — bringing professional nutrition services
                   to those ready to take control of their health.
@@ -148,7 +149,10 @@ export default function HomePage() {
                   Gwen · Pearson · Sully
                 </p>
                 <p className="mt-4 text-neutral-600 font-sans text-sm">
-                  Registered Nutritionist
+                  Registered Holistic Nutritionist
+                </p>
+                <p className="mt-1 text-neutral-600 font-sans text-sm">
+                  Certified in Holistic Nutrition
                 </p>
               </div>
             </FadeIn>
@@ -166,8 +170,9 @@ export default function HomePage() {
               </h2>
               <p className="mt-4 text-green-100 font-sans text-base">
                 Whether you&apos;re looking for a meal plan, want to join a
-                group program, or need a personalized consultation — reach out
-                today and let&apos;s get started.
+                group program, or desire a personalized meal plan designed
+                physiologically <em>just</em> for you — reach out today and
+                let&apos;s get started.
               </p>
               <Link
                 href="/contact"

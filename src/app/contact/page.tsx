@@ -61,7 +61,15 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   className="mt-2 block text-base text-neutral-900 font-sans hover:text-green-700 transition-colors"
                 >
-                  {siteConfig.social.instagramHandle}
+                  Instagram {siteConfig.social.instagramHandle}
+                </a>
+                <a
+                  href={siteConfig.social.tiktok}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 block text-base text-neutral-900 font-sans hover:text-green-700 transition-colors"
+                >
+                  TikTok {siteConfig.social.tiktokHandle}
                 </a>
               </div>
 
@@ -86,16 +94,24 @@ export default function ContactPage() {
         <div className="mx-auto max-w-6xl px-5 py-16 text-center">
           <FadeIn direction="none">
             <p className="text-green-100 font-sans text-base">
-              Follow us on Instagram
+              Follow us on social media
             </p>
-            <div className="mt-3">
+            <div className="mt-3 flex items-center justify-center gap-6">
               <a
                 href={siteConfig.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block text-white font-sans text-sm border-b border-white pb-0.5 hover:border-green-300 transition-colors"
               >
-                {siteConfig.social.instagramHandle}
+                Instagram
+              </a>
+              <a
+                href={siteConfig.social.tiktok}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-white font-sans text-sm border-b border-white pb-0.5 hover:border-green-300 transition-colors"
+              >
+                TikTok
               </a>
             </div>
           </FadeIn>
