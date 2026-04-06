@@ -44,7 +44,7 @@ export default function AboutPage() {
                 charging for this,&rdquo; GPS Nutrition was born.
               </p>
               <p>
-                GPS stands for Gwen and her two sons, Pearson and Sully — a
+                GPS stands for Gwen and her two sons, Pearce and Sully — a
                 name that also reflects the mission of the business: to guide
                 people on their path to better nutrition. Just like a GPS helps
                 you find your way, GPS Nutrition helps you navigate the

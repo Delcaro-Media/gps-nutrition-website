@@ -146,7 +146,7 @@ export default function HomePage() {
               <div className="bg-green-50 rounded-lg p-10 text-center">
                 <p className="text-6xl font-serif text-green-700">GPS</p>
                 <p className="mt-2 text-sm uppercase tracking-[0.2em] text-green-600 font-sans font-medium">
-                  Gwen · Pearson · Sully
+                  Gwen · Pearce · Sully
                 </p>
                 <p className="mt-4 text-neutral-600 font-sans text-sm">
                   Registered Holistic Nutritionist
