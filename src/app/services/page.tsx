@@ -281,26 +281,14 @@ export default function ServicesPage() {
             delay={150}
             className="lg:col-span-2 flex items-center"
           >
-            <div className="w-full bg-green-50 rounded-lg p-8 text-center">
-              <svg
-                className="w-20 h-20 text-green-600 mx-auto"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1}
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-                />
-              </svg>
-              <p className="mt-4 text-lg font-serif text-green-800">
-                One-on-One
-              </p>
-              <p className="mt-2 text-sm text-neutral-500 font-sans">
-                Fully personalized
-              </p>
+            <div className="w-full overflow-hidden rounded-lg aspect-video">
+              <iframe
+                src="https://player.vimeo.com/video/1159276248"
+                className="w-full h-full"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                title="Metabolic Balance — One-on-One Consulting"
+              />
             </div>
           </FadeIn>
         </div>
