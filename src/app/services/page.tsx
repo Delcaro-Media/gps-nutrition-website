@@ -281,14 +281,21 @@ export default function ServicesPage() {
             delay={150}
             className="lg:col-span-2 flex items-center"
           >
-            <div className="w-full overflow-hidden rounded-lg aspect-video">
-              <iframe
-                src="https://player.vimeo.com/video/1159276248"
-                className="w-full h-full"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                title="Metabolic Balance — One-on-One Consulting"
-              />
+            <div className="w-full">
+              <div className="overflow-hidden rounded-lg aspect-video">
+                <iframe
+                  src="https://player.vimeo.com/video/1159276248"
+                  className="w-full h-full"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  title="Metabolic Balance — One-on-One Consulting"
+                />
+              </div>
+              <p className="mt-4 text-sm text-neutral-500 font-sans italic">
+                Before we chat, I&apos;d love for you to watch this — it gives a
+                really clear picture of how we approach metabolism, hormones, and
+                sustainable results.
+              </p>
             </div>
           </FadeIn>
         </div>

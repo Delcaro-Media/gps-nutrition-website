@@ -13,7 +13,7 @@ export function Footer() {
               alt="GPS Nutrition"
               width={400}
               height={160}
-              className="h-12 w-auto"
+              className="h-15 w-auto"
             />
             <p className="mt-4 text-sm leading-relaxed">
               Personalized nutrition services to help you reach your health
