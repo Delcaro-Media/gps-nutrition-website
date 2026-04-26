@@ -1,28 +1,39 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-playfair);
-  --color-green-50: #f0fdf4;
-  --color-green-100: #dcfce7;
-  --color-green-200: #bbf7d0;
-  --color-green-300: #86efac;
-  --color-green-400: #4ade80;
-  --color-green-500: #22c55e;
-  --color-green-600: #16a34a;
-  --color-green-700: #15803d;
-  --color-green-800: #166534;
-  --color-green-900: #14532d;
+  --font-sans: var(--font-overpass);
+  --font-display: "Open Sauce Sans";
+  --font-subheading: var(--font-jost);
+  --font-accent: var(--font-caveat);
+
+  /* Brand olive scale — anchored on #4C503B (700) and #6D7355 (500, "Sage Green") */
+  --color-green-50: #f4f5ef;
+  --color-green-100: #e1e4d2;
+  --color-green-200: #c5caa9;
+  --color-green-300: #a4ab85;
+  --color-green-400: #828862;
+  --color-green-500: #6d7355;
+  --color-green-600: #585d45;
+  --color-green-700: #4c503b;
+  --color-green-800: #3d4131;
+  --color-green-900: #2e3025;
+
+  /* Additional brand tokens from the brand book */
+  --color-cream: #efe7dd;
+  --color-oak: #c5a682;
+  --color-obsidian: #222123;
+  --color-pebble: #848481;
+  --color-sage: #6d7355;
 }
 
 body {
-  background: #faf9f7;
-  color: #1a1a1a;
+  background: #efe7dd;
+  color: #222123;
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
 h1, h2, h3 {
-  font-family: var(--font-display), Georgia, serif;
+  font-family: var(--font-display), system-ui, sans-serif;
 }
 
 /* Smooth scroll for anchor links */
@@ -73,6 +84,6 @@ html {
 /* Global focus-visible styles for keyboard navigation */
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #15803d;
+  outline: 2px solid #4c503b;
   outline-offset: 2px;
 }

@@ -1,18 +1,27 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Overpass, Jost, Caveat } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import "@fontsource/open-sauce-sans/400.css";
+import "@fontsource/open-sauce-sans/500.css";
+import "@fontsource/open-sauce-sans/600.css";
+import "@fontsource/open-sauce-sans/700.css";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const overpass = Overpass({
+  variable: "--font-overpass",
   subsets: ["latin"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const jost = Jost({
+  variable: "--font-jost",
+  subsets: ["latin"],
+});
+
+const caveat = Caveat({
+  variable: "--font-caveat",
   subsets: ["latin"],
 });
 
@@ -67,7 +76,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-CA">
-      <body className={`${inter.variable} ${playfair.variable} antialiased`}>
+      <body className={`${overpass.variable} ${jost.variable} ${caveat.variable} antialiased`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
