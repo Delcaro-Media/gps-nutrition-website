@@ -8,17 +8,15 @@ export const siteConfig = {
   fullName: "GPS Nutrition Ltd.",
   tagline: "Simple nutrition guidance for real life",
   description:
-    "Personalized nutrition services including meal plans, group programs, and one-on-one consultations. Helping you reach your health goals with expert guidance.",
+    "Personalized one-on-one nutrition consulting designed for your body, goals, and lifestyle.",
   url: "https://www.gpsnutrition.ca",
   owner: "Gwen Ganske",
   emails: {
     info: "gwen@gpsnutrition.ca",
   },
-  social: {
-    instagram: "https://www.instagram.com/gps_nutrition_ltd/",
-    instagramHandle: "@gps_nutrition_ltd",
-    tiktok: "https://www.tiktok.com/@gpsnutrition",
-    tiktokHandle: "@gpsnutrition",
+  phone: {
+    display: "403.505.0403",
+    tel: "+14035050403",
   },
   navigation: [
     { label: "Home", href: "/" },

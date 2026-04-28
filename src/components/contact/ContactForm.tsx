@@ -74,26 +74,6 @@ export function ContactForm() {
 
       <div>
         <label
-          htmlFor="interest"
-          className="block text-sm font-sans font-medium text-neutral-700 mb-1"
-        >
-          I&apos;m interested in
-        </label>
-        <select
-          id="interest"
-          name="interest"
-          className="w-full border border-neutral-300 rounded-md px-4 py-3 text-neutral-900 font-sans text-sm focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent bg-white"
-        >
-          <option value="">Select a service (optional)</option>
-          <option value="meal-plans">Meal Plans</option>
-          <option value="group-programs">Group Programs</option>
-          <option value="one-on-one">One-on-One Consulting</option>
-          <option value="not-sure">Not sure yet</option>
-        </select>
-      </div>
-
-      <div>
-        <label
           htmlFor="message"
           className="block text-sm font-sans font-medium text-neutral-700 mb-1"
         >

@@ -16,63 +16,13 @@ export default function HomePage() {
                 What We Offer
               </p>
               <h2 className="mt-3 text-3xl text-neutral-900">
-                Three Ways to Reach Your Goals
+                One-on-One Nutrition Consulting
               </h2>
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-1 gap-16 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 max-w-5xl mx-auto">
             <FadeIn>
-              <div className="text-center">
-                <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                  <svg
-                    className="w-8 h-8 text-green-700"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl text-neutral-900">Meal Plans</h3>
-                <p className="mt-4 text-neutral-600 leading-relaxed font-sans text-base">
-                  Ready-to-follow meal plans tailored to different goals and
-                  calorie levels. A simple, affordable way to start eating
-                  better today.
-                </p>
-              </div>
-            </FadeIn>
-            <FadeIn delay={150}>
-              <div className="text-center">
-                <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                  <svg
-                    className="w-8 h-8 text-green-700"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl text-neutral-900">Group Programs</h3>
-                <p className="mt-4 text-neutral-600 leading-relaxed font-sans text-base">
-                  Join a 4&ndash;6 week cohort for community support and
-                  accountability. Work through a structured program with a
-                  group of like-minded individuals.
-                </p>
-              </div>
-            </FadeIn>
-            <FadeIn delay={300}>
               <div className="text-center">
                 <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
                   <svg
@@ -89,13 +39,58 @@ export default function HomePage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl text-neutral-900">
-                  One-on-One Consulting
-                </h3>
+                <h3 className="text-xl text-neutral-900">Fully Personalized</h3>
                 <p className="mt-4 text-neutral-600 leading-relaxed font-sans text-base">
-                  A fully personalized nutrition plan designed specifically for
-                  your body, goals, and lifestyle. Includes requisitions and
-                  detailed analysis.
+                  A nutrition plan built 100% around your body, your goals,
+                  and the life you actually live.
+                </p>
+              </div>
+            </FadeIn>
+            <FadeIn delay={150}>
+              <div className="text-center">
+                <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                  <svg
+                    className="w-8 h-8 text-green-700"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-xl text-neutral-900">Lab Requisitions</h3>
+                <p className="mt-4 text-neutral-600 leading-relaxed font-sans text-base">
+                  Pull lab work and use real, detailed analysis to ground your
+                  plan in what your body actually needs.
+                </p>
+              </div>
+            </FadeIn>
+            <FadeIn delay={300}>
+              <div className="text-center">
+                <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                  <svg
+                    className="w-8 h-8 text-green-700"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.871c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513M15 8.25v-1.5m-6 1.5v-1.5m12 9.75-1.5.75a3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0L3 16.5m15-3.379a48.474 48.474 0 0 0-6-.371c-2.032 0-4.034.126-6 .371m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.169c0 .621-.504 1.125-1.125 1.125H4.125A1.125 1.125 0 0 1 3 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 0 1 6 13.12M12.265 3.11a.375.375 0 1 1-.53 0L12 2.845l.265.265Zm-3 0a.375.375 0 1 1-.53 0L9 2.845l.265.265Zm6 0a.375.375 0 1 1-.53 0L15 2.845l.265.265Z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-xl text-neutral-900">Built for Real Life</h3>
+                <p className="mt-4 text-neutral-600 leading-relaxed font-sans text-base">
+                  No fad diets. No extreme restrictions. Practical, sustainable
+                  guidance that fits the way you actually eat.
                 </p>
               </div>
             </FadeIn>
@@ -107,7 +102,7 @@ export default function HomePage() {
                 href="/services"
                 className="inline-block text-sm font-sans font-medium uppercase tracking-[0.15em] text-green-700 border-b border-green-700 pb-1 hover:border-green-400 transition-colors"
               >
-                Learn More About Our Services
+                Learn How It Works
               </Link>
             </div>
           </FadeIn>
@@ -128,11 +123,10 @@ export default function HomePage() {
                 </h2>
                 <p className="mt-6 text-neutral-600 leading-relaxed font-sans text-base">
                   GPS Nutrition was born from a passion for helping people
-                  obtain wellness through nutrition. After years of creating
-                  meal plans and nutrition
-                  guidance for friends and family, founder Gwen Ganske
-                  made it official — bringing professional nutrition services
-                  to those ready to take control of their health.
+                  obtain wellness through nutrition. After years of guiding
+                  friends and family toward better eating, founder Gwen Ganske
+                  made it official — bringing professional one-on-one nutrition
+                  consulting to those ready to take control of their health.
                 </p>
                 <Link
                   href="/about"
@@ -169,8 +163,7 @@ export default function HomePage() {
                 Ready to Start Your Journey?
               </h2>
               <p className="mt-4 text-green-100 font-sans text-base">
-                Whether you&apos;re looking for a meal plan, want to join a
-                group program, or desire a personalized meal plan designed
+                If you&apos;re ready for a nutrition plan designed
                 physiologically <em>just</em> for you — reach out today and
                 let&apos;s get started.
               </p>

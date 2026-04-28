@@ -4,6 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { siteConfig } from "@/data/siteConfig";
 import "@fontsource/open-sauce-sans/400.css";
 import "@fontsource/open-sauce-sans/500.css";
 import "@fontsource/open-sauce-sans/600.css";
@@ -25,47 +26,103 @@ const caveat = Caveat({
   subsets: ["latin"],
 });
 
+const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.gpsnutrition.ca"),
+  metadataBase: new URL(siteConfig.url),
   title: {
-    default: "GPS Nutrition | Personalized Nutrition Services",
+    default: "GPS Nutrition | Personalized One-on-One Nutrition Consulting",
     template: "%s | GPS Nutrition",
   },
   description:
-    "Personalized nutrition services including meal plans, group programs, and one-on-one consultations. Guiding your path to better nutrition.",
+    "Personalized one-on-one nutrition consulting with Gwen Ganske, CHN. Plans designed around your body, goals, and lifestyle — including lab requisitions and detailed analysis.",
+  applicationName: "GPS Nutrition",
+  authors: [{ name: "Gwen Ganske" }],
+  creator: "Gwen Ganske",
+  publisher: "GPS Nutrition Ltd.",
   keywords: [
     "GPS Nutrition",
-    "nutritionist",
-    "meal plans",
-    "nutrition consulting",
-    "group nutrition programs",
-    "personalized nutrition",
+    "Gwen Ganske",
+    "registered holistic nutritionist",
+    "one-on-one nutrition consulting",
+    "personalized nutrition plan",
+    "metabolic balance",
+    "holistic nutrition",
+    "nutrition coach Canada",
+    "lab requisitions nutrition",
     "healthy eating",
-    "Canada",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "GPS Nutrition",
+    title: "GPS Nutrition | Personalized One-on-One Nutrition Consulting",
     description:
-      "Personalized nutrition services including meal plans, group programs, and one-on-one consultations.",
-    url: "https://www.gpsnutrition.ca",
+      "Personalized one-on-one nutrition consulting designed for your body, goals, and lifestyle.",
+    url: siteConfig.url,
     siteName: "GPS Nutrition",
     locale: "en_CA",
     type: "website",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "GPS Nutrition",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "GPS Nutrition",
+    title: "GPS Nutrition | Personalized One-on-One Nutrition Consulting",
     description:
-      "Personalized nutrition services. Meal plans, group programs, and one-on-one consultations.",
-    images: ["/og-image.jpg"],
+      "Personalized one-on-one nutrition consulting designed for your body, goals, and lifestyle.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  category: "health",
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": `${siteConfig.url}/#business`,
+  name: siteConfig.fullName,
+  alternateName: siteConfig.name,
+  url: siteConfig.url,
+  logo: `${siteConfig.url}/logo.png`,
+  image: `${siteConfig.url}/logo.png`,
+  description:
+    "Personalized one-on-one nutrition consulting designed for your body, goals, and lifestyle. Includes lab requisitions and detailed analysis.",
+  serviceType: "Nutrition Consulting",
+  priceRange: "$$",
+  email: siteConfig.emails.info,
+  telephone: siteConfig.phone.tel,
+  areaServed: {
+    "@type": "Country",
+    name: "Canada",
+  },
+  founder: {
+    "@type": "Person",
+    name: siteConfig.owner,
+    jobTitle: "Registered Holistic Nutritionist",
+    worksFor: { "@id": `${siteConfig.url}/#business` },
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Nutrition Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "One-on-One Nutrition Consulting",
+          description:
+            "Fully personalized nutrition plan designed for your body, goals, and lifestyle. Includes lab requisitions and detailed analysis.",
+        },
+      },
+    ],
   },
 };
 
@@ -79,21 +136,7 @@ export default function RootLayout({
       <body className={`${overpass.variable} ${jost.variable} ${caveat.variable} antialiased`}>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "ProfessionalService",
-              name: "GPS Nutrition Ltd.",
-              url: "https://www.gpsnutrition.ca",
-              description:
-                "Personalized nutrition services including meal plans, group programs, and one-on-one consultations.",
-              serviceType: "Nutrition Consulting",
-              areaServed: {
-                "@type": "Country",
-                name: "Canada",
-              },
-            }),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         <a
           href="#main-content"
@@ -106,8 +149,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
       </body>
-      {/* TODO: Replace G-XXXXXXXXXX with your real Google Analytics measurement ID */}
-      <GoogleAnalytics gaId="G-XXXXXXXXXX" />
+      {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
     </html>
   );
 }

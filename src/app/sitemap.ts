@@ -1,12 +1,20 @@
 import type { MetadataRoute } from "next";
+import { siteConfig } from "@/data/siteConfig";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.gpsnutrition.ca";
+  const lastModified = new Date("2026-04-28");
 
-  return [
-    { url: baseUrl, lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
-    { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/services`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+  const routes: { path: string; changeFrequency: "monthly" | "yearly"; priority: number }[] = [
+    { path: "", changeFrequency: "monthly", priority: 1.0 },
+    { path: "/services", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/about", changeFrequency: "yearly", priority: 0.7 },
+    { path: "/contact", changeFrequency: "yearly", priority: 0.6 },
   ];
+
+  return routes.map(({ path, changeFrequency, priority }) => ({
+    url: `${siteConfig.url}${path}`,
+    lastModified,
+    changeFrequency,
+    priority,
+  }));
 }

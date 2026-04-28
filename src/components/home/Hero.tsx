@@ -24,14 +24,14 @@ export function Hero() {
         </FadeIn>
         <FadeIn delay={200}>
           <p className="mt-5 text-xl text-green-200 font-sans font-light italic">
-            Meal plans, group programs &amp; personalized consultations
+            Personalized one-on-one nutrition consulting
           </p>
         </FadeIn>
         <FadeIn delay={300}>
           <p className="mt-8 text-green-100 max-w-lg leading-relaxed font-sans text-base">
-            Whether you&apos;re looking for a ready-made meal plan, the
-            accountability of a group program, or a fully customized nutrition
-            plan designed just for you — GPS Nutrition has you covered.
+            A nutrition plan designed 100% around your body, goals, and
+            lifestyle — including detailed analysis and lab requisitions
+            when they&apos;re the right fit.
           </p>
         </FadeIn>
         <FadeIn delay={450}>
@@ -40,7 +40,7 @@ export function Hero() {
               href="/services"
               className="text-sm font-sans font-medium uppercase tracking-[0.15em] text-white border-b border-white pb-1 hover:border-green-300 hover:text-green-200 transition-colors"
             >
-              View Services
+              How It Works
             </Link>
             <Link
               href="/contact"

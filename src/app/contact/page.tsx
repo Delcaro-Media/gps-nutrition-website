@@ -6,7 +6,19 @@ import { ContactForm } from "@/components/contact/ContactForm";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with GPS Nutrition. Reach out to start your nutrition journey today.",
+    "Get in touch with Gwen at GPS Nutrition to discuss one-on-one nutrition consulting and start your journey toward better health.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact GPS Nutrition",
+    description:
+      "Get in touch with Gwen to discuss one-on-one nutrition consulting and start your journey.",
+    url: "/contact",
+  },
+  twitter: {
+    title: "Contact GPS Nutrition",
+    description:
+      "Get in touch with Gwen to discuss one-on-one nutrition consulting and start your journey.",
+  },
 };
 
 export default function ContactPage() {
@@ -41,6 +53,18 @@ export default function ContactPage() {
             <div className="space-y-10">
               <div>
                 <p className="text-sm uppercase tracking-[0.15em] text-neutral-600 font-sans font-medium">
+                  Phone
+                </p>
+                <a
+                  href={`tel:${siteConfig.phone.tel}`}
+                  className="mt-2 block text-base text-neutral-900 font-sans hover:text-green-700 transition-colors"
+                >
+                  {siteConfig.phone.display}
+                </a>
+              </div>
+
+              <div>
+                <p className="text-sm uppercase tracking-[0.15em] text-neutral-600 font-sans font-medium">
                   Email
                 </p>
                 <a
@@ -48,28 +72,6 @@ export default function ContactPage() {
                   className="mt-2 block text-base text-neutral-900 font-sans hover:text-green-700 transition-colors"
                 >
                   {siteConfig.emails.info}
-                </a>
-              </div>
-
-              <div>
-                <p className="text-sm uppercase tracking-[0.15em] text-neutral-600 font-sans font-medium">
-                  Follow Along
-                </p>
-                <a
-                  href={siteConfig.social.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-2 block text-base text-neutral-900 font-sans hover:text-green-700 transition-colors"
-                >
-                  Instagram {siteConfig.social.instagramHandle}
-                </a>
-                <a
-                  href={siteConfig.social.tiktok}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-1 block text-base text-neutral-900 font-sans hover:text-green-700 transition-colors"
-                >
-                  TikTok {siteConfig.social.tiktokHandle}
                 </a>
               </div>
 
@@ -89,34 +91,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Social CTA */}
-      <section className="bg-green-800">
-        <div className="mx-auto max-w-6xl px-5 py-16 text-center">
-          <FadeIn direction="none">
-            <p className="text-green-100 font-sans text-base">
-              Follow us on social media
-            </p>
-            <div className="mt-3 flex items-center justify-center gap-6">
-              <a
-                href={siteConfig.social.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block text-white font-sans text-sm border-b border-white pb-0.5 hover:border-green-300 transition-colors"
-              >
-                Instagram
-              </a>
-              <a
-                href={siteConfig.social.tiktok}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block text-white font-sans text-sm border-b border-white pb-0.5 hover:border-green-300 transition-colors"
-              >
-                TikTok
-              </a>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
     </>
   );
 }

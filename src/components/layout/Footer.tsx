@@ -51,30 +51,18 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               <li>
                 <a
-                  href={siteConfig.social.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
-                >
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a
-                  href={siteConfig.social.tiktok}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
-                >
-                  TikTok
-                </a>
-              </li>
-              <li>
-                <a
                   href={`mailto:${siteConfig.emails.info}`}
                   className="hover:text-white transition-colors"
                 >
                   {siteConfig.emails.info}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`tel:${siteConfig.phone.tel}`}
+                  className="hover:text-white transition-colors"
+                >
+                  {siteConfig.phone.display}
                 </a>
               </li>
             </ul>

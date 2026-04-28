@@ -4,9 +4,22 @@ import Image from "next/image";
 import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About Gwen Ganske",
   description:
-    "Learn about GPS Nutrition and founder Gwen Ganske. Personalized nutrition services to help you reach your health goals.",
+    "GPS Nutrition Ltd. was founded by Gwen Ganske, a Registered Holistic Nutritionist passionate about guiding people to better nutrition through personalized, sustainable plans.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Gwen Ganske | GPS Nutrition",
+    description:
+      "Meet Gwen Ganske, Registered Holistic Nutritionist and founder of GPS Nutrition Ltd.",
+    url: "/about",
+    type: "profile",
+  },
+  twitter: {
+    title: "About Gwen Ganske | GPS Nutrition",
+    description:
+      "Meet Gwen Ganske, Registered Holistic Nutritionist and founder of GPS Nutrition Ltd.",
+  },
 };
 
 export default function AboutPage() {
@@ -38,10 +51,10 @@ export default function AboutPage() {
             <h2 className="text-3xl text-neutral-900">The Story</h2>
             <div className="mt-8 space-y-5 text-neutral-600 leading-relaxed font-sans text-base">
               <p>
-                For years, Gwen created meal plans and nutrition guidance for
-                friends and family — always out of a genuine love for helping
-                people feel better through food. It started as a passion, but
-                when the people around her said &ldquo;you really need to start
+                For years, Gwen guided friends and family through better
+                nutrition — always out of a genuine love for helping people
+                feel better through food. It started as a passion, but when
+                the people around her said &ldquo;you really need to start
                 charging for this,&rdquo; GPS Nutrition was born.
               </p>
               <p>
@@ -93,9 +106,9 @@ export default function AboutPage() {
               <div className="mt-8 space-y-5 text-neutral-600 leading-relaxed font-sans text-base text-left">
                 <p>
                   We believe that nutrition doesn&apos;t have to be complicated.
-                  Whether you need a straightforward meal plan to follow, the
-                  accountability of a group, or a deep-dive into your personal
-                  nutritional needs — we meet you where you are.
+                  Through a deep-dive into your personal nutritional needs,
+                  we build a plan that meets you where you are and works with
+                  the life you actually live.
                 </p>
                 <p>
                   Our services are designed to be practical and sustainable. No
