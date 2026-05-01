@@ -9,6 +9,5 @@ export default function robots(): MetadataRoute.Robots {
       disallow: ["/print/"],
     },
     sitemap: `${siteConfig.url}/sitemap.xml`,
-    host: siteConfig.url,
   };
 }

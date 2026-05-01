@@ -2,10 +2,16 @@
 
 import { useState } from "react";
 
-export function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+const FORMSUBMIT_ENDPOINT =
+  "https://formsubmit.co/ajax/gwenganske@gmail.com";
 
-  if (submitted) {
+type Status = "idle" | "submitting" | "success" | "error";
+
+export function ContactForm() {
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  if (status === "success") {
     return (
       <div className="bg-green-50 rounded-lg p-8 text-center">
         <svg
@@ -29,15 +35,56 @@ export function ContactForm() {
     );
   }
 
+  const isSubmitting = status === "submitting";
+
   return (
     <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        // TODO: Hook up to email service or form handler (e.g. Formspree, mailto, etc.)
-        setSubmitted(true);
+      onSubmit={async (event) => {
+        event.preventDefault();
+        const form = event.currentTarget;
+        const formData = new FormData(form);
+
+        setStatus("submitting");
+        setErrorMessage("");
+
+        try {
+          const response = await fetch(FORMSUBMIT_ENDPOINT, {
+            method: "POST",
+            headers: { Accept: "application/json" },
+            body: formData,
+          });
+
+          if (!response.ok) {
+            throw new Error(`Submission failed (${response.status})`);
+          }
+
+          setStatus("success");
+        } catch (error) {
+          setStatus("error");
+          setErrorMessage(
+            error instanceof Error
+              ? error.message
+              : "Something went wrong. Please try again or email us directly."
+          );
+        }
       }}
       className="space-y-6"
     >
+      <input
+        type="hidden"
+        name="_subject"
+        value="New contact form submission — GPS Nutrition"
+      />
+      <input type="hidden" name="_template" value="table" />
+      <input
+        type="text"
+        name="_honey"
+        tabIndex={-1}
+        autoComplete="off"
+        className="hidden"
+        aria-hidden="true"
+      />
+
       <div>
         <label
           htmlFor="name"
@@ -89,11 +136,21 @@ export function ContactForm() {
         />
       </div>
 
+      {status === "error" && (
+        <p
+          role="alert"
+          className="text-sm font-sans text-red-700 bg-red-50 border border-red-200 rounded-md px-4 py-3"
+        >
+          {errorMessage || "Something went wrong. Please try again."}
+        </p>
+      )}
+
       <button
         type="submit"
-        className="w-full bg-green-700 text-white font-sans font-medium text-sm uppercase tracking-[0.15em] py-3 px-6 rounded-md hover:bg-green-800 transition-colors focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2"
+        disabled={isSubmitting}
+        className="w-full bg-green-700 text-white font-sans font-medium text-sm uppercase tracking-[0.15em] py-3 px-6 rounded-md hover:bg-green-800 transition-colors focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        Send Message
+        {isSubmitting ? "Sending..." : "Send Message"}
       </button>
     </form>
   );
