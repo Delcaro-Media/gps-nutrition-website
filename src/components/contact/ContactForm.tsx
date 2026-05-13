@@ -1,15 +1,37 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const FORMSUBMIT_ENDPOINT =
-  "https://formsubmit.co/ajax/gwenganske@gmail.com";
+  "https://formsubmit.co/ajax/gwen@gpsnutrition.ca";
+
+const MIN_FILL_TIME_MS = 3000;
+const SPAM_MATCH_THRESHOLD = 2;
+
+const SPAM_PATTERNS: RegExp[] = [
+  /\bseo\b/i,
+  /search engine optimi[sz]ation/i,
+  /google search results?/i,
+  /rank (your|higher|on)/i,
+  /\bbacklinks?\b/i,
+  /digital marketing/i,
+  /\b(web ?design|web ?development|wordpress) (services|company|agency)\b/i,
+  /\bgoogle (ranking|ranks|page (one|1|two|2))/i,
+  /(generate|boost|increase|drive) (more )?(traffic|leads|conversions|sales)/i,
+];
+
+const URL_REGEX = /https?:\/\/|www\./i;
 
 type Status = "idle" | "submitting" | "success" | "error";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const mountedAtRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    mountedAtRef.current = Date.now();
+  }, []);
 
   if (status === "success") {
     return (
@@ -43,6 +65,26 @@ export function ContactForm() {
         event.preventDefault();
         const form = event.currentTarget;
         const formData = new FormData(form);
+
+        const elapsedMs = mountedAtRef.current
+          ? Date.now() - mountedAtRef.current
+          : MIN_FILL_TIME_MS;
+        const messageValue = String(formData.get("message") ?? "");
+        const websiteHoney = String(formData.get("website") ?? "");
+        let spamScore = SPAM_PATTERNS.filter((p) =>
+          p.test(messageValue)
+        ).length;
+        if (URL_REGEX.test(messageValue)) spamScore += 1;
+
+        // Silently "succeed" on bot signals — error messages teach bots to retry.
+        if (
+          elapsedMs < MIN_FILL_TIME_MS ||
+          spamScore >= SPAM_MATCH_THRESHOLD ||
+          websiteHoney
+        ) {
+          setStatus("success");
+          return;
+        }
 
         setStatus("submitting");
         setErrorMessage("");
@@ -79,6 +121,14 @@ export function ContactForm() {
       <input
         type="text"
         name="_honey"
+        tabIndex={-1}
+        autoComplete="off"
+        className="hidden"
+        aria-hidden="true"
+      />
+      <input
+        type="text"
+        name="website"
         tabIndex={-1}
         autoComplete="off"
         className="hidden"
