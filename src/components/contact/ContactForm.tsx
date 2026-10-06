@@ -2,8 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const FORMSUBMIT_ENDPOINT =
-  "https://formsubmit.co/ajax/gwen@gpsnutrition.ca";
+const FREEFORM_ENDPOINT = "https://api.freform.com/f/hUSzQfFnsPds";
 
 const MIN_FILL_TIME_MS = 3000;
 const SPAM_MATCH_THRESHOLD = 2;
@@ -90,14 +89,16 @@ export function ContactForm() {
         setErrorMessage("");
 
         try {
-          const response = await fetch(FORMSUBMIT_ENDPOINT, {
+          const response = await fetch(FREEFORM_ENDPOINT, {
             method: "POST",
-            headers: { Accept: "application/json" },
             body: formData,
           });
 
           if (!response.ok) {
-            throw new Error(`Submission failed (${response.status})`);
+            const data = await response.json().catch(() => null);
+            throw new Error(
+              data?.errors?.[0] ?? `Submission failed (${response.status})`
+            );
           }
 
           setStatus("success");
@@ -117,14 +118,13 @@ export function ContactForm() {
         name="_subject"
         value="New contact form submission — GPS Nutrition"
       />
-      <input type="hidden" name="_template" value="table" />
       <input
         type="text"
         name="_honey"
         tabIndex={-1}
         autoComplete="off"
-        className="hidden"
         aria-hidden="true"
+        style={{ position: "absolute", left: "-9999px" }}
       />
       <input
         type="text"

@@ -103,7 +103,8 @@ export default function PrivacyPage() {
               </p>
               <ul className="mt-4 space-y-3 list-disc pl-6">
                 <li>
-                  <strong className="text-neutral-900">FormSubmit</strong> —
+                  <strong className="text-neutral-900">Freeform</strong> (Delcaro
+                  Media&apos;s own form service) —
                   delivers contact form messages to our email inbox.
                 </li>
                 <li>
